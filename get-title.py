@@ -34,7 +34,7 @@ def main():
       if filename.endswith('.html'):
         file_path = os.path.join(folder_path, filename)
         title = extract_title_from_html(file_path)
-        f.write(f"序号: {file_count}, 文件: {filename}, 标题: {title}\n")  # 写入到 res.txt
+        f.write(f"<ul class=\"sendinfo\"><li class=\"send_date\">{file_count}:{filename}</li><li class=\"send_title\"><a href=\"bugs/{filename}\">{title}</a></li></ul>\n")  # 写入到 res.txt
 
         file_count += 1
         if file_count >= 1048:
